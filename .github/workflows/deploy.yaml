@@ -19,8 +19,8 @@ jobs:
       - name: clone repo
         run: |
           echo "cloning repo"
-          git clone https://github.com/pdyke/napa.git
-          cd napa
+          git clone https://github.com/pdyke/napa.git home/ubuntu/napa
+          cd home/ubuntu/napa
           pwd
           echo "done"
       
