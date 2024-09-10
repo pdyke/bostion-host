@@ -20,10 +20,12 @@ jobs:
         run: |
           echo "cloning repo"
           git clone https://github.com/pdyke/napa.git
+          cd napa
+          pwd
           echo "done"
       
-      - name: copy files
-        run: |
-          echo "copying files"
-          scp -i /home/ubuntu/testament.pem -o ProxyCommand="ssh -i /home/ubuntu/testament.pem ubuntu@ip-10-0-1-115 -W %h:%p" /home/ubuntu/napa ubuntu@10.0.2.222:/home/ubuntu/napa
-          echo "done"
+    #   - name: copy files
+    #     run: |
+    #       echo "copying files"
+    #       scp -i /home/ubuntu/testament.pem -o ProxyCommand="ssh -i /home/ubuntu/testament.pem ubuntu@ip-10-0-1-115 -W %h:%p" /home/ubuntu/napa ubuntu@10.0.2.222:/home/ubuntu/napa
+    #       echo "done"
