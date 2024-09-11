@@ -20,7 +20,6 @@ jobs:
         run: |        
           echo "cloning repo"
           cd /home/ubuntu
-          rm -rf napa
           git clone https://github.com/pdyke/napa.git
           cd napa
           pwd
@@ -29,5 +28,5 @@ jobs:
       - name: copy files
         run: |
           echo "copying files"
-          scp -r -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@13.49.245.166 -W %h:%p" /home/ubuntu/napa ubuntu@10.0.2.38:/home/ubuntu/
+          scp -r -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@51.20.187.113 -W %h:%p" /home/ubuntu/napa ubuntu@10.0.2.105:/home/ubuntu/
           echo "done"
