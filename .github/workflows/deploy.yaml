@@ -20,6 +20,7 @@ jobs:
         run: |        
           echo "cloning repo"
           cd /home/ubuntu
+          rm -rf napa
           git clone https://github.com/pdyke/napa.git
           cd napa
           pwd
