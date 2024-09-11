@@ -29,5 +29,5 @@ jobs:
       - name: copy files
         run: |
           echo "copying files"
-          scp -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@13.49.245.166 -W %h:%p" /home/ubuntu/napa ubuntu@10.0.2.38:/home/ubuntu/napa
+          scp -r -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -i /home/ubuntu/testament.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@13.49.245.166 -W %h:%p" /home/ubuntu/napa ubuntu@10.0.2.38:/home/ubuntu/
           echo "done"
